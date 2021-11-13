@@ -11,13 +11,14 @@ export function NavigationBar() {
           <button className="w-full font-Alfa-Slab-One">comments</button> */}
         <div className="flex justify-evenly items-center">
           <button
-            className="w-full font-Alfa-Slab-One hover:opacity-40"
+            className="w-full font-Alfa-Slab-One"
             onClick={() =>
               window.open("https://github.com/AtharvaKamble/search-comments")
             }
           >
             <img
               alt="Link to the source code GitHub repository"
+              className="hover:opacity-70"
               src="/github_logo.png"
             />
           </button>
