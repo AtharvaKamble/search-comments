@@ -1,11 +1,12 @@
-import React from "react";
 import { NavigationBar } from "./components/NavigationBar";
+import { Search } from "./components/Search";
 
 function App() {
   return (
-    <section className="flex justify-center w-full">
+    <div className="flex justify-center w-full">
       <NavigationBar />
-    </section>
+      {/* <Search /> */}
+    </div>
   );
 }
 
