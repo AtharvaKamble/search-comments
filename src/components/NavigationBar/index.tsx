@@ -1,14 +1,14 @@
 export function NavigationBar() {
   return (
-    <nav className="grid grid-cols-2 w-full p-4 m-1 text-purple-900">
+    <div className="grid grid-cols-2 w-full p-4 m-1 text-purple-900">
       <span className="text-4xl mx-auto font-Alfa-Slab-One">
         search-comments
       </span>
       <div className="flex justify-evenly">
         {/* <button className="w-full font-Alfa-Slab-One">
-          search
-        </button>
-        <button className="w-full font-Alfa-Slab-One">comments</button> */}
+            search
+          </button>
+          <button className="w-full font-Alfa-Slab-One">comments</button> */}
         <div className="flex justify-evenly items-center">
           <button
             className="w-full font-Alfa-Slab-One hover:opacity-40"
@@ -23,6 +23,6 @@ export function NavigationBar() {
           </button>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }

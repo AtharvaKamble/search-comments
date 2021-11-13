@@ -3,9 +3,9 @@ import { Search } from "./components/Search";
 
 function App() {
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex flex-col justify-center w-full">
       <NavigationBar />
-      {/* <Search /> */}
+      <Search />
     </div>
   );
 }

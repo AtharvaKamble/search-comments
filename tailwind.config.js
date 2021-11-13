@@ -9,11 +9,12 @@ module.exports = {
       // font-family: 'Patua One', cursive;
       // font-family: 'Roboto Slab', serif;
       fontFamily: {
-        'Alfa-Slab-One': ['Alfa Slab One', 'cursive'],
-        'Archivo-Black': ['Archivo Black', 'sans-serif'],
-        'Patua-One': ['Patua One', 'cursive'],
-        'Roboto-Slab': ['Roboto Slab', 'serif']
-      }
+        "Alfa-Slab-One": ["Alfa Slab One", "cursive"],
+        "Archivo-Black": ["Archivo Black", "sans-serif"],
+        "Patua-One": ["Patua One", "cursive"],
+        "Roboto-Slab": ["Roboto Slab", "serif"],
+        "Space-Mono": ["Space Mono", "monospace"],
+      },
     },
   },
   variants: {},
