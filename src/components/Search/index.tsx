@@ -2,6 +2,9 @@ import { useState } from "react";
 
 export function Search() {
   const [videoLink, setVideoLink] = useState<string>();
+  const [pasteButtonText, setPasteButtonText] = useState<string>(
+    "paste from clipboard"
+  );
 
   const isFirefox: boolean = navigator.userAgent.indexOf("Firefox") === -1;
 
@@ -9,6 +12,7 @@ export function Search() {
     const clipboardText = await navigator.clipboard.readText();
 
     setVideoLink(clipboardText);
+    setPasteButtonText("Pasted!");
   };
 
   return (
@@ -23,16 +27,22 @@ export function Search() {
           onChange={(e) => setVideoLink(e.target.value)}
           className="p-5 outline-none w-3/5 font-Space-Mono text-lg"
         />
-        {/* Firefox doesn't allow reading lines */}
+        {/* Firefox doesn't allow reading clipboard expect in extensions, hence we are disabling for it */}
         {isFirefox ? (
           <button
-            className="p-3 rounded-md hover:bg-gray-100"
+            style={{ minWidth: "150px" }}
+            className="p-3 rounded-md hover:bg-gray-100 active:animate-scale-up-center"
             onClick={handlePasteFromClipboard}
           >
-            paste from clipboard
+            {pasteButtonText}
           </button>
         ) : null}
-        <button className="p-3 rounded-md hover:bg-gray-100">search</button>
+        <button
+          style={{ minWidth: "150px" }}
+          className="p-3 rounded-md hover:bg-gray-100 active:animate-scale-up-center"
+        >
+          search
+        </button>
       </div>
     </div>
   );
