@@ -15,9 +15,27 @@ module.exports = {
         "Roboto-Slab": ["Roboto Slab", "serif"],
         "Space-Mono": ["Space Mono", "monospace"],
       },
+      animation: {
+        "scale-up-center":
+          "scale-up-center 0.9s cubic-bezier(0.470, 0.000, 0.745, 0.715) both",
+      },
+      keyframes: {
+        "scale-up-center": {
+          "0%": {
+            transform: "scale(.8)",
+          },
+          to: {
+            transform: "scale(1)",
+          },
+        },
+      },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      animation: ["hover", "active"],
+    },
+  },
   plugins: [],
   purge: {
     // Filenames to scan for classes
