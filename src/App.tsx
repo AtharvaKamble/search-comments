@@ -1,5 +1,7 @@
 import { NavigationBar } from "./components/NavigationBar";
 import { Search } from "./components/Search";
+import dotenv from "dotenv";
+dotenv.config();
 
 function App() {
   return (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getComments } from "./../../util/comments";
 
 export function Search() {
   const [videoLink, setVideoLink] = useState<string>();
@@ -13,6 +14,10 @@ export function Search() {
 
     setVideoLink(clipboardText);
     setPasteButtonText("Pasted!");
+  };
+
+  const handleSearch = async () => {
+    await getComments("https://www.youtube.com/watch?v=wtLJPvx7-ys");
   };
 
   return (
@@ -40,6 +45,7 @@ export function Search() {
         <button
           style={{ minWidth: "150px" }}
           className="p-3 rounded-md hover:bg-gray-100 active:animate-scale-up-center"
+          onClick={handleSearch}
         >
           search
         </button>
